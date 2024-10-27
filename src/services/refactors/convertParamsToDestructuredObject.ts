@@ -115,6 +115,7 @@ const toDestructuredAction = {
     description: refactorDescription,
     kind: "refactor.rewrite.parameters.toDestructured",
 };
+
 registerRefactor(refactorName, {
     kinds: [toDestructuredAction.kind],
     getEditsForAction: getRefactorEditsToConvertParametersToDestructuredObject,
@@ -432,7 +433,7 @@ function entryToType(entry: FindAllReferences.NodeEntry): Node | undefined {
     return undefined;
 }
 
-function getFunctionDeclarationAtPosition(file: SourceFile, startPosition: number, checker: TypeChecker): ValidFunctionDeclaration | undefined {
+export function getFunctionDeclarationAtPosition(file: SourceFile, startPosition: number, checker: TypeChecker): ValidFunctionDeclaration | undefined {
     const node = getTouchingToken(file, startPosition);
     const functionDeclaration = getContainingFunctionDeclaration(node);
 

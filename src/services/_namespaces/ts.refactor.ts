@@ -24,3 +24,5 @@ import * as generateGetAccessorAndSetAccessor from "./ts.refactor.generateGetAcc
 export { generateGetAccessorAndSetAccessor };
 import * as inferFunctionReturnType from "./ts.refactor.inferFunctionReturnType.js";
 export { inferFunctionReturnType };
+import * as addUseRefToReactComponent from "./ts.refactor.addUseRefToReactComponent.js";
+export { addUseRefToReactComponent };
